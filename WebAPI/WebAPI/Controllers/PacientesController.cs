@@ -61,7 +61,7 @@ namespace WebAPI.Controllers
 
                 //Insere a foto de perfil
                 var containerName = "vitalcontainer06";
-                var connectionString = "";
+                var connectionString = "DefaultEndpointsProtocol=https;AccountName=blobvitalhub06;AccountKey=MX4hkXdgYNtK2dlsrYTlP+efSxEWDcRr3hsn3JN4fKafwe6pSHRVUsjQOE+R7mYpW6flLZ5FZVwo+AStN62lCw==;EndpointSuffix=core.windows.net";
                 user.Foto = await AzureBlobStorageHelper.UploadImageBlobAsync(pacienteModel.Arquivo!, connectionString, containerName);
 
                 user.Paciente = new Paciente();
